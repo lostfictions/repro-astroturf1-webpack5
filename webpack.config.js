@@ -34,7 +34,12 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        use: ['astroturf/loader'],
+        use: [
+          {
+            loader: "astroturf/loader",
+            options: { useAltLoader: true }
+          }
+        ],
       },
     ],
   },
